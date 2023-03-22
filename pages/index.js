@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import styles from "@/styles/Home.module.css";
+import Image from "next/image";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -23,7 +24,7 @@ export default function Home() {
       <div className="container">
         <div className="row">
           <div className="col mt-5">
-            <h1>JEB'S  Movie</h1>
+            <h1>JEBS  Movie</h1>
           </div>
         </div>
 
@@ -42,7 +43,8 @@ export default function Home() {
             data.map((movie, kye) => (
               <div className="col-md-3 my-3" key={kye}>
                 <div className={`${styles.card} card`}>
-                  <img src={movie.Poster} className={`${styles.img}card-img-top`} />
+                  {/* <img src={movie.Poster} className={`${styles.img}card-img-top`} /> */}
+                  <Image src={movie.Poster} className={`${styles.img}card-img-top`} alt="" width={300}  height={400}  />
                   <div className="card-body">
                     <h5 className="card-title">{movie.Title}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{movie.Year}</h6>
