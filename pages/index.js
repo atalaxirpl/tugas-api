@@ -8,7 +8,7 @@ export default function Home() {
   const [data, setData] = useState(null);
 
   const getMovie = () => {
-    fetch(`http://www.omdbapi.com/?apikey=366e9bad&s=${input}`)
+    fetch(`https://www.omdbapi.com?apikey=366e9bad&s=${input}`)
       .then((response) => response.json())
       .then((hasil) => {
         setData(hasil.Search);
